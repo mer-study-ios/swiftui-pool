@@ -15,11 +15,17 @@ struct ContentView: View {
     var body: some View {
         VStack {
             // Target row
-            Text("Hello, MerJQ!")
-                .fontWeight(.semibold)
-                .foregroundColor(Color.green)
+            HStack {
+                Text("Put the bullseye as closest as you can to:")
+                Text("100")
+            }
             
             // Slider row
+            HStack {
+                Text("1")
+                Slider(value: .constant(10))
+                Text("100")
+            }
             
             // Button row
             Button(action: {
@@ -34,6 +40,18 @@ struct ContentView: View {
             }
             
             // Score row
+            HStack {
+                Button(action: {}) {
+                    Text("Start over")
+                }
+                Text("Score: ")
+                Text("999999")
+                Text("Round: ")
+                Text("999")
+                Button(action: {}) {
+                    Text("Info")
+                }
+            }
         }
             
     }
